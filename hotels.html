@@ -12,34 +12,36 @@
       <li class="site-header__site-navigation-item"><a href="#">Информация</a></li>
       <li class="site-header__site-navigation-item"><a href="#">Фото и видео</a></li>
       <li class="site-header__site-navigation-item"><a href="#">Карта штата</a></li>
-      <li class="site-header__site-navigation-item"><a href="#">Гостиницы</a></li>
+      <li class="site-header__site-navigation-item"><a>Гостиницы</a></li>
     </ul>
-    <a class="site-header__main-logo"><img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона"></a>
+    <a class="site-header__main-logo" href="index.html"><img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона"></a>
   </nav>
 </header>
 <main class="site-main">
-  <section class="site-main__result result">
-    <h2 class="visually-hidden">Результаты поиска</h2>
-    <form class="result__form">
+  <section class="site-main__search-form search-form">
+    <h2 class="visually-hidden">Форма поиска</h2>
+    <form class="search-form__form">
     
     </form>
-    <span class="result__total">Найдено: 3</span>
-    <section class="result__sorting sorting">
-      <h3 class="sorting__title">Сортировка:</h3>
-      <ul class="sorting__type-list">
-        <li class="sorting__type-item"><a>по цене</a></li>
-        <li class="sorting__type-item"><a href="#">по типу</a></li>
-        <li class="sorting__type-item"><a href="#">по рейтингу</a></li>
-      </ul>
-      <ul class="sorting__course-list">
-        <li class="sorting__course-item">
-          <a>по возрастанию</a>
-        </li>
-        <li class="sorting__course-item">
-          <a href="#">по убыванию</a>
-        </li>
-      </ul>
-    </section>
+  </section>
+  <section class=" site-main__sorting sorting">
+    <h2 class="sorting__title">Сортировка:</h2>
+    <ul class="sorting__type-list">
+      <li class="sorting__type-item"><a>по цене</a></li>
+      <li class="sorting__type-item"><a href="#">по типу</a></li>
+      <li class="sorting__type-item"><a href="#">по рейтингу</a></li>
+    </ul>
+    <ul class="sorting__course-list">
+      <li class="sorting__course-item">
+        <a>по возрастанию</a>
+      </li>
+      <li class="sorting__course-item">
+        <a href="#">по убыванию</a>
+      </li>
+    </ul>
+    <span class="sorting__total">Найдено: 3</span>
+  </section>
+  <section class="site-main__result result">
     <ul class="result__hotel-list">
       <li class="result__hotel-item">
         <img src="img/layer-21.jpg" width="135px" height="90px" alt="Вид на гостиницу Amara Resort & Spa">
@@ -78,7 +80,7 @@
     <li class="site-footer__social-item"><a class="site-footer__social-button site-footer__social-button-fb visually-hidden" href="#">Мы в Facebook</a></li>
     <li class="site-footer__social-item"><a class="site-footer__social-button site-footer__social-button-yt visually-hidden" href="#">Мы на Youtube</a></li>
   </ul>
-  <a class="site-footer__html-academy"><img src="img/logo-name.svg" width="115" height="41" alt="Логотип компании «HTML Academy»"></a>
+  <span class="site-footer__caption caption">Website by<a class="caption__html-academy"><img src="img/logo-name.svg" width="115" height="41" alt="Логотип компании «HTML Academy»"></a></span>
 </footer>
 </body>
 </html>
