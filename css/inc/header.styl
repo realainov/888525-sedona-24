@@ -1,0 +1,26 @@
+.site-header
+  &__site-navigation
+    position relative
+    text(800, 14px, 26px)
+  &__site-navigation-list
+    display flex
+    margin 0
+    padding 0 72px
+    list-style none
+  &__site-navigation-item
+    width 240px
+    padding 16px 0
+  for k in 3 2
+    &__site-navigation-item:nth-child(4n-{k})
+      text-align left
+  for k in 1 0
+    &__site-navigation-item:nth-child(4n-{k})
+      text-align right
+  &__site-navigation-item:nth-child(4n-2)
+    margin-right 48px
+  &__site-navigation-item:nth-child(4n-1)
+    margin-left 48px
+  &__main-logo
+    position absolute
+    left 530px
+    top 0

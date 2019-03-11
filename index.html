@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Седона: Главная страница</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Седона: Главная страница</title>
+</head>
+<body>
+<div class="center-wrapper">
   <header class="site-header">
     <h1 class="visually-hidden">Седона: город в штате Аризона</h1>
     <nav class="site-header__site-navigation">
@@ -18,13 +20,15 @@
     </nav>
   </header>
   <main class="site-main">
+    <div class="site-main__welcome"></div>
     <section class="site-main__features features">
       <h2 class="visually-hidden">Преимущества</h2>
-      <b class="title site-main__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+      <b class="title features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <ul class="features__list features__list-1">
         <li class="features__item-1">
           <b class="title features__title">Настоящий городок</b>
+          <p>— №1 —</p>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         </li>
       </ul>
@@ -43,29 +47,28 @@
         </li>
       </ul>
       <ul class="features__list features__list-3">
-        <li class="features__item">
+        <li class="features__item-3">
           <b class="title features__title">Там есть Мост дьявола</b>
+          <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </li>
       </ul>
       <ul class="features__list features__list-4">
-        <li class="features__item">
+        <li class="features__item-4">
           <b class="title features__title">Небольшая площадь</b>
+          <p>— №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
         </li>
-        <li class="features__item">
+        <li class="features__item-4">
           <b class="title features__title">Красивая дорога</b>
+          <p>— №4 —</p>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="features__item">
+        <li class="features__item-4">
           <b class="title features__title">Мало туристов</b>
+          <p>— №5 —</p>
           <p>Большинство едет в гранд каньон и толпится там</p>
         </li>
-      </ul>
-    </section>
-    <section class="recommendation">
-      <h2 class="visually-hidden">Рекомендации</h2>
-      <ul class="recommendation__list">
       </ul>
     </section>
     <section class="site-main__search search">
@@ -73,8 +76,16 @@
       <b class="search__question">Заинтересовались?</b>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="title search__title" href="#">Поиск гостиницы в Седоне</a>
-      <form class="search__form">
-  
+      <form class="search__form search-form" action="https://echo.htmlacademy.ru" method="get">
+        <label for="arrival-date-field">Дата заезда:</label>
+        <input class="search-form__date-field" id="arrival-date-field" name="arrival-date" type="date">
+        <label for="departure-date-field">Дата выезда:</label>
+        <input class="search-form__date-field" id="departure-date-field" name="departure-date" type="date">
+        <label for="adults-number-field">Взрослые:</label>
+        <input class="search-form__number-field" id="adults-number-field" name="adults-number" type="number" value="2">
+        <label for="kids-number-field">Дети:</label>
+        <input class="search-form__number-field" id="kids-number-field" name="kids-number" type="number" value="0">
+        <button class="search-form__button" type="submit" aria-label="Найти">Найти</button>
       </form>
       <a href="#"><img src="img/map.jpg" width="1200" height="594" alt="Карта города"></a>
     </section>
@@ -82,11 +93,21 @@
   <footer class="site-footer">
     <a class="site-footer__hashtag" href="#">#visitsedona</a>
     <ul class="site-footer__social-list">
-      <li class="site-footer__social-item"><a class="site-footer__social-button site-footer__social-button-tw visually-hidden" href="#">Мы в Twitter</a></li>
-      <li class="site-footer__social-item"><a class="site-footer__social-button site-footer__social-button-fb visually-hidden" href="#">Мы в Facebook</a></li>
-      <li class="site-footer__social-item"><a class="site-footer__social-button site-footer__social-button-yt visually-hidden" href="#">Мы на Youtube</a></li>
+      <li class="site-footer__social-item">
+        <a class="site-footer__social-button site-footer__social-button-tw" href="#" title="Мы в Twitter"></a>
+      </li>
+      <li class="site-footer__social-item">
+        <a class="site-footer__social-button site-footer__social-button-fb" href="#" title="Мы в Facebook"></a>
+      </li>
+      <li class="site-footer__social-item">
+        <a class="site-footer__social-button site-footer__social-button-yt" href="#" title="Мы на Youtube"></a>
+      </li>
     </ul>
-    <span class="site-footer__caption caption">Website by<a class="caption__html-academy"><img src="img/logo-name.svg" width="115" height="41" alt="Логотип компании «HTML Academy»"></a></span>
+    <div class="site-footer__caption caption">Website by<a class="caption__html-academy"><img src="img/logo-name.svg"
+                                                                                              width="115" height="41"
+                                                                                              alt="Логотип компании «HTML Academy»"></a>
+    </div>
   </footer>
-  </body>
+</div>
+</body>
 </html>
