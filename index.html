@@ -23,70 +23,76 @@
     <div class="site-main__welcome"></div>
     <section class="site-main__features features">
       <h2 class="visually-hidden">Преимущества</h2>
-      <b class="title features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <b class="title features__title-attract">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+      <p class="features__attract">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <ul class="features__list features__list-1">
-        <li class="features__item-1">
+        <li class="features__item features__item-1">
           <b class="title features__title">Настоящий городок</b>
           <p>— №1 —</p>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         </li>
       </ul>
       <ul class="features__list features__list-2">
-        <li class="features__item-2">
+        <li class="features__item features__item-2">
           <h3 class="title features__title">Жильё</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </li>
-        <li class="features__item-2">
+        <li class="features__item features__item-2">
           <h3 class="title features__title">Еда</h3>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
-        <li class="features__item-2">
+        <li class="features__item features__item-2">
           <h3 class="title features__title">Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </li>
       </ul>
       <ul class="features__list features__list-3">
-        <li class="features__item-3">
-          <b class="title features__title">Там есть Мост дьявола</b>
+        <li class="features__item features__item-3">
+          <b class="title features__title">Там есть Мост&nbsp;дьявола</b>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </li>
       </ul>
       <ul class="features__list features__list-4">
-        <li class="features__item-4">
+        <li class="features__item features__item-4">
           <b class="title features__title">Небольшая площадь</b>
           <p>— №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
         </li>
-        <li class="features__item-4">
+        <li class="features__item features__item-4">
           <b class="title features__title">Красивая дорога</b>
           <p>— №4 —</p>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="features__item-4">
+        <li class="features__item features__item-4">
           <b class="title features__title">Мало туристов</b>
           <p>— №5 —</p>
-          <p>Большинство едет в гранд каньон и толпится там</p>
+          <p>Большинство едет в гранд каньон иtextтолпится там</p>
         </li>
       </ul>
     </section>
     <section class="site-main__search search">
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
       <b class="search__question">Заинтересовались?</b>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a class="title search__title" href="#">Поиск гостиницы в Седоне</a>
-      <form class="search__form search-form" action="https://echo.htmlacademy.ru" method="get">
-        <label for="arrival-date-field">Дата заезда:</label>
-        <input class="search-form__date-field" id="arrival-date-field" name="arrival-date" type="date">
-        <label for="departure-date-field">Дата выезда:</label>
-        <input class="search-form__date-field" id="departure-date-field" name="departure-date" type="date">
-        <label for="adults-number-field">Взрослые:</label>
-        <input class="search-form__number-field" id="adults-number-field" name="adults-number" type="number" value="2">
-        <label for="kids-number-field">Дети:</label>
-        <input class="search-form__number-field" id="kids-number-field" name="kids-number" type="number" value="0">
-        <button class="search-form__button" type="submit" aria-label="Найти">Найти</button>
-      </form>
+      <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <div class="search__form-container">
+        <a class="title search__title" href="#">Поиск гостиницы в Седоне</a>
+        <form class="search__form search-form" action="https://echo.htmlacademy.ru" method="get">
+          <label>Дата заезда:
+          <input class="search-form__date-field" id="arrival-date-field" name="arrival-date" type="date" value="2017-04-24">
+          </label>
+          <label>Дата выезда:
+          <input class="search-form__date-field" id="departure-date-field" name="departure-date" type="date" value="2017-07-04">
+          </label>
+          <label>Взрослые:
+          <input class="search-form__number-field" id="adults-number-field" name="adults-number" type="text" value="2">
+          </label>
+          <label>Дети:
+          <input class="search-form__number-field" id="kids-number-field" name="kids-number" type="text" value="0">
+          </label>
+          <button class="search-form__button" type="submit" aria-label="Найти">Найти</button>
+        </form>
+      </div>
       <a href="#"><img src="img/map.jpg" width="1200" height="594" alt="Карта города"></a>
     </section>
   </main>

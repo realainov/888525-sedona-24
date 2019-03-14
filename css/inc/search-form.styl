@@ -1,9 +1,43 @@
 .search-form
+  display flex
+  justify-content space-between
+  align-items flex-start
+  flex-wrap wrap
+  height 395px
+  padding 55px
+  position absolute
+  background-color white
+  box-shadow 0 7px 15px 0 rgba(0, 1, 1, 0.15)
   text(800, 14px, 26px)
+  label
+    display flex
+    justify-content space-between
+    align-items center
+  for n in 1 2
+    label:nth-of-type({n})
+      width 100%
+  label:nth-of-type(3)
+    width 226px
+  label:nth-of-type(4)
+    width 180px
   input
+    height 38px
+    text(800, 14px, 26px)
     text-transform uppercase
+  &__date-field
+    width 346px
+    padding-left 12px
+  &__number-field
+    width calc(38px * 3)
+    //text-align center
+  input::after
+    content "Лалала" !important
   &__button
+    width 100%
+    min-height 52px
+    margin-top auto
     text(800, 21px, 26px)
     background-color crayola
     color white
+    text-transform uppercase
     border none
