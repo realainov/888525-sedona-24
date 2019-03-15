@@ -221,6 +221,9 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+body {
+  position: relative;
+}
 a {
   color: #000;
   text-decoration: none;
@@ -529,11 +532,13 @@ a {
 }
 .search-form input {
   height: 38px;
+  background-color: #f2f2f2;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: 800;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
+  border: none;
 }
 .search-form__date-field {
   width: 346px;
@@ -541,9 +546,7 @@ a {
 }
 .search-form__number-field {
   width: calc(38px * 3);
-}
-.search-form input::after {
-  content: "Лалала" !important;
+  text-align: center;
 }
 .search-form__button {
   width: 100%;
@@ -592,6 +595,14 @@ a {
   fill: #81b3d2;
 }
 .sorting-form {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  min-height: 220px;
+  padding: 30px 70px;
   background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
   color: #fff;
@@ -605,6 +616,9 @@ a {
   font-size: 16px;
   line-height: 21px;
 }
+.sorting-form input {
+  display: none;
+}
 .sorting-form__facility-list,
 .sorting-form__type-list {
   margin: 0;
@@ -612,6 +626,7 @@ a {
   list-style: none;
 }
 .sorting-form label {
+  margin-bottom: 50px;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -620,6 +635,119 @@ a {
 .sorting-form__price-field {
   background-color: transparent;
   border: none;
+}
+.sorting-form__checkbox + label {
+  margin-left: 38px;
+  position: relative;
+  cursor: pointer;
+}
+.sorting-form__checkbox[disabled]:hover + label,
+.sorting-form__checkbox[disabled]:focus + label {
+  cursor: default;
+}
+.sorting-form__checkbox + label::before {
+  position: absolute;
+  left: -39px;
+  top: -3px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 23px;
+  content: "";
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: left top;
+}
+.sorting-form__checkbox:checked + label::before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 23px;
+  content: "";
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: left top;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.sorting-form__range-filter {
+  width: 316px;
+  margin-left: auto;
+}
+.sorting-form__price-controls {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+}
+.sorting-form__price-controls label {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  margin-left: 50px;
+  margin-bottom: 0;
+  width: 50%;
+}
+.sorting-form__price-controls label:first-of-type {
+  border-right: 2px solid #fff;
+}
+.sorting-form__price-controls input {
+  width: 60px;
+  margin-left: 5px;
+  background-color: transparent;
+  border: none;
+}
+.sorting-form__range-controls {
+  position: relative;
+}
+.sorting-form__scale {
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.3);
+}
+.sorting-form__bar {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  background-color: #fff;
+}
+.sorting-form__toggle {
+  width: 20px;
+  height: 24px;
+  position: absolute;
+  bottom: -12px;
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.sorting-form__toggle:active {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.sorting-form__toggle--min {
+  left: 0;
+}
+.sorting-form__toggle--max {
+  right: 0;
 }
 .sorting-form__button {
   font-family: "PT Sans", Helvetica, sans-serif;
@@ -656,8 +784,49 @@ a {
   background-color: #f2f2f2;
   color: #666;
 }
+.site-footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 1200px;
+  min-height: 120px;
+  padding: 38px 100px 38px 130px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.9);
+}
+.site-footer__hashtag {
+  margin-top: -12px;
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 26px;
+}
 .site-footer__social-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
   margin: 0;
+  margin-top: -12px;
+  margin-right: -20px;
   padding: 0;
   list-style: none;
 }
@@ -669,6 +838,12 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
+.site-footer__social-item {
+  margin-right: 6px;
+}
+.site-footer__social-item:last-child {
+  margin-right: 0;
+}
 .site-footer__social-button-tw {
   background-image: url("../img/tw-icon.svg");
 }
@@ -678,15 +853,24 @@ a {
 .site-footer__social-button-yt {
   background-image: url("../img/yt-icon.svg");
 }
-.site-footer__hashtag {
-  font-family: "PT Sans", Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: 21px;
-  line-height: 26px;
-}
 .caption {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
+}
+.caption__html-academy {
+  margin-left: 8px;
 }

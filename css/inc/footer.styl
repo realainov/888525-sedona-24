@@ -1,6 +1,21 @@
 .site-footer
+  display flex
+  justify-content space-between
+  align-items center
+  width 1200px
+  min-height 120px
+  padding 38px 100px 38px 130px
+  position absolute
+  bottom 0
+  background-color rgba(255, 255, 255, 0.9)
+  &__hashtag
+    margin-top -12px
+    text(800, 21px, 26px)
   &__social-list
+    display flex
     margin 0
+    margin-top -12px
+    margin-right -20px
     padding 0
     list-style none
   &__social-button
@@ -10,11 +25,13 @@
     background-color crayola
     background-repeat no-repeat
     background-position center
+  &__social-item
+    margin-right 6px
+  &__social-item:last-child
+    margin-right 0
   &__social-button-tw
     background-image url("../img/tw-icon.svg")
   &__social-button-fb
     background-image url("../img/fb-icon.svg")
   &__social-button-yt
     background-image url("../img/yt-icon.svg")
-  &__hashtag
-    text(800, 21px, 26px)
