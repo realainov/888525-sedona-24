@@ -1,24 +1,40 @@
 .sorting-form
   display flex
-  min-height 220px
-  padding 30px 70px
+  justify-content space-between
+  min-height 216px
+  padding 26px 62px 20px 62px
   background-image url("../img/filter-background.jpg")
   background-repeat no-repeat
+  background-position center
   color white
+  &__left-column
+    display flex
+  &__right-column
+    display flex
+    align-items center
+    flex-direction column
   fieldset
     border none
   legend
+    margin-bottom 20px
     text(800, 16px, 21px)
-  input
-    display none
+  &__facility
+    margin-right 100px
   &__facility-list
   &__type-list
     margin 0
     padding 0
     list-style none
+    input
+      display none
   label
-    margin-bottom 50px
     text(400, 14px, 21px)
+  &__facility-item
+  &__type-item
+    margin-bottom 26px
+  &__facility-item:last-child
+  &__type-item:last-child
+    margin-bottom 0
   &__price-field
     background-color transparent
     border none
@@ -39,24 +55,30 @@
     icon("checkbox-on.svg", 27px, 23px)
     background-position left top
     transform(rotate(360deg))
+  &__cost
+    legend
+      margin-bottom 6px
   &__range-filter
     width 316px
-    margin-left auto
+    margin-bottom 22px
   &__price-controls
     display flex
     width 100%
-    margin-bottom 30px
+    margin-bottom 20px
     border 2px solid white
     border-radius 3px
     label
       display flex
+      align-items center
       margin-left 50px
       margin-bottom 0
+      //padding 6.5px 0 5px
       width 50%
     label:first-of-type
       border-right 2px solid white
     input
-      width 60px
+      width 100%
+      height 32px
       margin-left 5px
       background-color transparent
       border none
@@ -88,7 +110,11 @@
   &__toggle--max
     right 0
   &__button
+    flex-grow 0
+    margin-left -10px
+    padding 6px 34px
     text(400, 14px, 21px)
     background-color transparent
     text-transform uppercase
-    border none
+    border 2px solid white
+    border-radius 3px

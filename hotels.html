@@ -24,153 +24,201 @@
     <section class="site-main__sorting sorting">
       <h2 class="visually-hidden">Сортировка результатов</h2>
       <form class="sorting__form sorting-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="sorting-form__facility">
-          <legend>Инфраструктура:</legend>
-          <ul class="sorting-form__facility-list">
-            <li class="sorting-form__facility-item">
-              <input class="sorting-form__checkbox" name="pool" id="pool-input" type="checkbox">
-              <label for="pool-input">Бассейн</label>
-            </li>
-            <li class="sorting-form__facility-item">
-              <input class="sorting-form__checkbox" name="car-park" id="car-park-input" type="checkbox">
-              <label for="car-park-input">Парковка</label>
-            </li>
-            <li class="sorting-form__facility-item">
-              <input class="sorting-form__checkbox" name="wi-fi" id="wi-fi-input" type="checkbox">
-              <label for="wi-fi-input">Wi-Fi</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="sorting-form__type">
-          <legend>Тип жилья:</legend>
-          <ul class="sorting-form__type-list">
-            <li class="sorting-form__infrastructure-item">
-              <input class="sorting-form__checkbox" name="hotel" id="hotel-input" type="checkbox">
-              <label for="hotel-input">Гостиница</label>
-            </li>
-            <li class="sorting-form__type-item">
-              <input class="sorting-form__checkbox" name="motel" id="motel-input" type="checkbox">
-              <label for="motel-input">Мотель</label>
-            </li>
-            <li class="sorting-form__type-item">
-              <input class="sorting-form__checkbox" name="apartments" id="apartments-input" type="checkbox">
-              <label for="apartments-input">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="sorting-form__cost">
-          <legend>Стоимость в сутки (Р):</legend>
-          <div class="sorting-form__range-filter">
-            <div class="sorting-form__range-controls">
-              <div class="sorting-form__price-controls">
-                <label class="sorting-form__min-price">от <input class="sorting-form__price-field" name="min-price" type="number" value="0"></label>
-                <label class="sorting-form__max-price">до <input class="sorting-form__price-field" name="max-price" type="number" value="4000"></label>
+        <div class="sorting-form__left-column">
+          <fieldset class="sorting-form__facility">
+            <legend>Инфраструктура:</legend>
+            <ul class="sorting-form__facility-list">
+              <li class="sorting-form__facility-item">
+                <input class="sorting-form__checkbox" name="pool" id="pool-input" type="checkbox">
+                <label for="pool-input">Бассейн</label>
+              </li>
+              <li class="sorting-form__facility-item">
+                <input class="sorting-form__checkbox" name="car-park" id="car-park-input" type="checkbox">
+                <label for="car-park-input">Парковка</label>
+              </li>
+              <li class="sorting-form__facility-item">
+                <input class="sorting-form__checkbox" name="wi-fi" id="wi-fi-input" type="checkbox">
+                <label for="wi-fi-input">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="sorting-form__type">
+            <legend>Тип жилья:</legend>
+            <ul class="sorting-form__type-list">
+              <li class="sorting-form__type-item">
+                <input class="sorting-form__checkbox" name="hotel" id="hotel-input" type="checkbox">
+                <label for="hotel-input">Гостиница</label>
+              </li>
+              <li class="sorting-form__type-item">
+                <input class="sorting-form__checkbox" name="motel" id="motel-input" type="checkbox">
+                <label for="motel-input">Мотель</label>
+              </li>
+              <li class="sorting-form__type-item">
+                <input class="sorting-form__checkbox" name="apartments" id="apartments-input" type="checkbox">
+                <label for="apartments-input">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="sorting-form__right-column">
+          <fieldset class="sorting-form__cost">
+            <legend>Стоимость в сутки (Р):</legend>
+            <div class="sorting-form__range-filter">
+              <div class="sorting-form__range-controls">
+                <div class="sorting-form__price-controls">
+                  <label class="sorting-form__min-price">от <input class="sorting-form__price-field" name="min-price" type="number" value="0"></label>
+                  <label class="sorting-form__max-price">до <input class="sorting-form__price-field" name="max-price" type="number" value="4000"></label>
+                </div>
+                <div class="sorting-form__scale">
+                  <div class="sorting-form__bar"></div>
+                </div>
+                <div class="sorting-form__toggle sorting-form__toggle--min"></div>
+                <div class="sorting-form__toggle sorting-form__toggle--max"></div>
               </div>
-              <div class="sorting-form__scale">
-                <div class="sorting-form__bar"></div>
-              </div>
-              <div class="sorting-form__toggle sorting-form__toggle--min"></div>
-              <div class="sorting-form__toggle sorting-form__toggle--max"></div>
             </div>
-          </div>
-        </fieldset>
-        <button class="sorting-form__button" type="submit" aria-label="Показать">Показать</button>
+          </fieldset>
+          <button class="sorting-form__button" type="submit" aria-label="Показать">Показать</button>
+        </div>
       </form>
-      <span class="title sorting__total">Найдено: 3</span>
-      <h2 class="sorting__title">Сортировка:</h2>
-      <ul class="sorting__type-list">
-        <li class="sorting__type-item"><a class="sorting__type-link">по цене</a></li>
-        <li class="sorting__type-item"><a class="sorting__type-link" href="#">по типу</a></li>
-        <li class="sorting__type-item"><a class="sorting__type-link" href="#">по рейтингу</a></li>
-      </ul>
-      <ul class="sorting__course-list">
-        <li class="sorting__course-item">
-          <a class="sorting__course-link" title="по возрастанию">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
-              <path d="M5.5 0L0 10h11z"/>
-            </svg>
-          </a>
-        </li>
-        <li class="sorting__course-item">
-          <a class="sorting__course-link" href="#" title="по убыванию">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
-              <path d="M5.5 10L0 0h11"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="sorting__sorting-options">
+        <span class="title sorting__total">Найдено: 3</span>
+        <h2 class="sorting__title">Сортировка:</h2>
+        <ul class="sorting__type-list">
+          <li class="sorting__type-item"><a class="sorting__type-link">по цене</a></li>
+          <li class="sorting__type-item"><a class="sorting__type-link" href="#">по типу</a></li>
+          <li class="sorting__type-item"><a class="sorting__type-link" href="#">по рейтингу</a></li>
+        </ul>
+        <ul class="sorting__course-list">
+          <li class="sorting__course-item">
+            <a class="sorting__course-link" title="по возрастанию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                <path d="M5.5 0L0 10h11z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="sorting__course-item">
+            <a class="sorting__course-link" href="#" title="по убыванию">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                <path d="M5.5 10L0 0h11"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="site-main__result result">
       <h2 class="visually-hidden">Результаты поиска</h2>
       <ul class="result__hotel-list">
         <li class="result__hotel-item">
           <img src="img/layer-21.jpg" width="135" height="90" alt="Вид на гостиницу Amara Resort & Spa">
-          <a class="title result__title" href="#">Amara Resort & Spa</a>
-          <p class="result__hotel-type">Гостиница</p>
-          <p class="result__price">От 4000 Р.</p>
-          <a class="button result__detail-button" href="#">Подробнее</a>
-          <a class="button result__booking-button" href="#">Забронировать</a>
-          <div class="result__rating-stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
+          <div class="result__hotel-row">
+            <div class="result__hotel-col">
+              <a class="title result__title" href="#">Amara Resort & Spa</a>
+              <ul class="result__rating-list">
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="result__hotel-col">
+              <p class="result__hotel-type">Гостиница</p>
+              <p class="result__price">От 4000 Р.</p>
+            </div>
+            <div class="result__hotel-col">
+              <a class="button result__detail-button" href="#">Подробнее</a>
+              <a class="button result__booking-button" href="#">Забронировать</a>
+              <p class="result__rating">Рейтинг: 8,5</p>
+            </div>
           </div>
-          <p class="result__rating">Рейтинг: 8,5</p>
         </li>
         <li class="result__hotel-item">
           <img src="img/layer-89.jpg" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
-          <a class="title result__title" href="#">Desert Quail Inn</a>
-          <p class="result__hotel-type">Мотель</p>
-          <p class="result__price">От 3000 Р.</p>
-          <a class="button result__detail-button" href="#">Подробнее</a>
-          <a class="button result__booking-button" href="#">Забронировать</a>
-          <div class="result__rating-stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
+          <div class="result__hotel-row">
+            <div class="result__hotel-col">
+              <a class="title result__title" href="#">Desert Quail Inn</a>
+              <ul class="result__rating-list">
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="result__hotel-col">
+              <p class="result__hotel-type">Мотель</p>
+              <p class="result__price">От 3000 Р.</p>
+            </div>
+            <div class="result__hotel-col">
+              <a class="button result__detail-button" href="#">Подробнее</a>
+              <a class="button result__booking-button" href="#">Забронировать</a>
+              <p class="result__rating">Рейтинг: 8,9</p>
+            </div>
           </div>
-          <p class="result__rating">Рейтинг: 8,9</p>
         </li>
         <li class="result__hotel-item">
           <img src="img/layer-22.jpg" width="135" height="90" alt="Вид на апартаменты Villas at Poco Diablo">
-          <a class="title result__title" href="#">Villas at Poco Diablo</a>
-          <p class="result__hotel-type">Апартаменты</p>
-          <p class="result__price">От 2000 Р.</p>
-          <a class="button result__detail-button" href="#">Подробнее</a>
-          <a class="button result__booking-button" href="#">Забронировать</a>
-          <div class="result__rating-stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
-              <path fill="#81B3D2"
-                    d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
-            </svg>
+          <div class="result__hotel-row">
+            <div class="result__hotel-col">
+              <a class="title result__title" href="#">Villas at Poco Diablo</a>
+              <ul class="result__rating-list">
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+                <li class="result__rating-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17">
+                    <path fill="#81B3D2"
+                          d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="result__hotel-col">
+              <p class="result__hotel-type">Апартаменты</p>
+              <p class="result__price">От 2000 Р.</p>
+            </div>
+            <div class="result__hotel-col">
+              <a class="button result__detail-button" href="#">Подробнее</a>
+              <a class="button result__booking-button" href="#">Забронировать</a>
+              <p class="result__rating">Рейтинг: 9,2</p>
+            </div>
           </div>
-          <p class="result__rating">Рейтинг: 9,2</p>
         </li>
       </ul>
     </section>

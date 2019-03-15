@@ -3,21 +3,56 @@
     margin 0
     padding 0
     list-style none
+  &__hotel-item
+    display flex
+    padding 25px 72px 30px 72px
+    border-bottom 1px solid smoky-white
+  &__hotel-row
+    display flex
+    flex-direction column
+    width 100%
+  &__hotel-col
+    display flex
+  &__hotel-col:nth-child(1)
+    justify-content space-between
+    margin-bottom -8px
+  &__hotel-col:nth-child(2)
+    margin-bottom -18px
+  &__hotel-col:nth-child(3)
+    margin-top auto
+  img
+    margin-top 5px
+    margin-right 30px
+  &__rating-list
+    display flex
+    margin 0
+    margin-top 3px
+    padding 0
+    list-style none
+  &__rating-item
+    margin-right 6px
+  &__rating-item:last-child
+    margin-right 0
+  &__hotel-type
+    width 115px
   &__detail-button
     display inline-block
     vertical-align baseline
-    padding 8px 17px 6px
+    margin-right 6px
+    padding 5.5px 17px 3.5px
     background-color crayola
     color white
   &__booking-button
     display inline-block
     vertical-align baseline
-    padding 8px 17px 6px
+    padding 5.5px 17px 3.5px
     background-color flea
     color white
   &__rating
     display inline-block
     vertical-align baseline
-    padding 8px 17px 6px
+    margin 0
+    margin-left auto
+    padding 5.5px 17px 3.5px
     background-color smoky-white
     color dull-grey
