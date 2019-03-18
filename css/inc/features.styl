@@ -1,17 +1,19 @@
 .features
   margin-bottom 50px
+  padding-top 60px
   text-align center
+  p
+    text(400, 14px, 26px)
+    color signal
   &__title-attract
     display block
     width 440px
     margin 0 auto 30px
   &__attract
     margin-bottom 48px
-  p
-    text(400, 14px, 26px)
-    color signal
   &__list
     display flex
+    flex-wrap wrap
     margin 0
     padding 0
     list-style none
@@ -32,24 +34,21 @@
     flex-direction column
     align-items center
     width 400px
-    height 256px
-    overflow hidden
     p
       margin-bottom 5px
   &__item-1
-    padding 50px 60px 64px
+    padding 50px 60px 52px
   &__item-2
-    height 330px
-    padding 162px 50px 85px
+    padding 162px 50px 75px
     background-repeat no-repeat
     background-position  center 60px
   for n in 1..3
     &__item-2:nth-child({n})
       background-image url("../img/icon-" + n + ".svg")
   &__item-3
-    padding 48px 48px 64px
+    padding 48px 48px 54px
   &__item-4
-    padding 48px 70px 64px
+    padding 48px 70px 54px
     background-color smoky
   &__item-1
   &__item-3

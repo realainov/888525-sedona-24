@@ -3,7 +3,7 @@
   justify-content space-between
   align-items center
   width 1200px
-  min-height 120px
+  min-height 130px
   padding 38px 100px 38px 130px
   background-color rgba(255, 255, 255, 0.9)
   &--absolute
@@ -14,25 +14,27 @@
     text(800, 21px, 26px)
   &__social-list
     display flex
+    flex-wrap wrap
+    max-width 312px
     margin 0
     margin-top -12px
     margin-right -20px
     padding 0
     list-style none
+  &__social-item
+    margin-right 6px
+    margin-bottom 6px
   &__social-button
-    display block
+    display flex
+    justify-content center
+    align-items center
     width 46px
     height 48px
     background-color crayola
-    background-repeat no-repeat
-    background-position center
-  &__social-item
-    margin-right 6px
-  &__social-item:last-child
-    margin-right 0
-  &__social-button-tw
-    background-image url("../img/tw-icon.svg")
-  &__social-button-fb
-    background-image url("../img/fb-icon.svg")
-  &__social-button-yt
-    background-image url("../img/yt-icon.svg")
+    &:hover
+    &:focus
+      background-color blue-grey
+    &:active
+      background-color blue-still
+      & img
+        opacity 0.3

@@ -6,6 +6,7 @@
     padding 27px 72px 32px 72px
     border-bottom 1px solid smoky-white
   &__total
+    flex-shrink 0
     margin-right 47px
   &__title
     margin 0
@@ -19,9 +20,11 @@
     padding 0
     list-style none
   &__type-list
+    flex-wrap wrap
     margin-bottom -15px
   &__type-item
     margin-right 33px
+    margin-bottom 5px
   &__type-item:last-child
     margin-right 0
   &__type-link
@@ -29,6 +32,12 @@
   &__type-link[href]
     color rgba(0, 0, 0, 0.3)
     border-bottom 1px dotted crayola
+    &:hover
+    &:focus
+      color crayola
+    &:active
+      color black
+      border-bottom-color transparent
   &__course-list
     margin-top 10px
     margin-left auto

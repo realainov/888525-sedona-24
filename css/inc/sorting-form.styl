@@ -51,10 +51,17 @@
     top -3px
     icon("checkbox-off.svg", 27px, 23px)
     background-position left top
+    transition 0.3s
+  &__checkbox[disabled] + label::before
+    icon("checkbox-off--disabled.svg", 27px, 23px)
+    background-position left top
   &__checkbox:checked + label::before
     icon("checkbox-on.svg", 27px, 23px)
     background-position left top
     transform(rotate(360deg))
+  &__checkbox[disabled]:checked + label::before
+    icon("checkbox-on--disabled.svg", 27px, 23px)
+    background-position left top
   &__cost
     legend
       margin-bottom 6px
@@ -87,7 +94,6 @@
   &__scale
     width 100%
     height 2px
-    overflow hidden
     background-color rgba(255, 255, 255, 0.3)
   &__bar
     width 100%
@@ -103,7 +109,7 @@
     background-repeat no-repeat
     background-position center
     cursor pointer
-  &__toggle:active
+  &__toggle:hover
     transform(scale(1.2))
   &__toggle--min
     left 0
@@ -112,9 +118,13 @@
   &__button
     flex-grow 0
     margin-left -10px
-    padding 6px 34px
+    padding 6px 34px 4px
     text(400, 14px, 21px)
     background-color transparent
     text-transform uppercase
     border 2px solid white
     border-radius 3px
+    &:hover
+    &:focus
+      background-color white
+      color black

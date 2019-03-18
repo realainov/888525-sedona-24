@@ -3,7 +3,6 @@
   justify-content space-between
   align-items flex-start
   flex-wrap wrap
-  height 395px
   padding 55px
   position absolute
   background-color white
@@ -13,6 +12,7 @@
     display flex
     justify-content space-between
     align-items center
+    margin-bottom 29px
   for n in 1 2
     label:nth-of-type({n})
       width 100%
@@ -26,18 +26,34 @@
     text(800, 14px, 26px)
     text-transform uppercase
     border none
+    transition background-color 0.3s
+    &:hover
+      background-color smoky-grey
+    &:focus
+      background-color white
+      outline 2px solid gainsborough
   &__date-field
     width 346px
     padding-left 12px
   &__number-field
     width calc(38px * 3)
     text-align center
+    &::-webkit-outer-spin-button
+    &::-webkit-inner-spin-button
+      -webkit-appearance none
   &__button
     width 100%
-    min-height 52px
-    margin-top auto
+    min-height 60px
+    margin-top: 24px
     text(800, 21px, 26px)
     background-color crayola
     color white
     text-transform uppercase
     border none
+    transition 0.3s
+    &:hover
+    &:focus
+      background-color blue-grey
+    &:active
+      background-color blue-still
+      color rgba(255, 255, 255, 0.3)

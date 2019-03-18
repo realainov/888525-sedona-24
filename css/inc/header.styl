@@ -4,12 +4,23 @@
     text(800, 14px, 26px)
   &__site-navigation-list
     display flex
+    flex-wrap wrap
     margin 0
     padding 0 72px
     list-style none
   &__site-navigation-item
     width 240px
     padding 16px 0
+    & a
+      color flea
+      &[href]
+        color black
+        &:hover
+        &:focus
+          color crayola
+        &:active
+          color black
+          opacity 0.3
   for k in 3 2
     &__site-navigation-item:nth-child(4n-{k})
       padding-right: 50px
