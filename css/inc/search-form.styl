@@ -1,18 +1,30 @@
+@keyframes show-modal
+  0%
+    transform translateY(-400px)
+  100%
+    transform none
+
 .search-form
-  display flex
+  display none
   justify-content space-between
   align-items flex-start
   flex-wrap wrap
   padding 55px
   position absolute
+  z-index 1
   background-color white
   box-shadow 0 7px 15px 0 rgba(0, 1, 1, 0.15)
   text(800, 14px, 26px)
+  &--show
+    display flex
+    animation-name show-modal
+    animation-duration 1s
   label
     display flex
     justify-content space-between
     align-items center
     margin-bottom 29px
+    position relative
   for n in 1 2
     label:nth-of-type({n})
       width 100%
@@ -35,12 +47,33 @@
   &__date-field
     width 346px
     padding-left 12px
+  &__calendar-button
+    position absolute
+    top 6px
+    right 8px
+    background-color transparent
+    border none
+    icon("calendar.svg", 22px, 23px)
   &__number-field
     width calc(38px * 3)
     text-align center
     &::-webkit-outer-spin-button
     &::-webkit-inner-spin-button
       -webkit-appearance none
+  &__count-button
+    position absolute
+    top 0
+    background-color transparent
+    border none
+    cursor default
+  &__prev-button
+    right 76px
+    &--show
+      icon("../img/minus.png", 38px, 38px)
+  &__next-button
+    right 0
+    &--show
+      icon("../img/plus.png", 38px, 38px)
   &__button
     width 100%
     min-height 60px

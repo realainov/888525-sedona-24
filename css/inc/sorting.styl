@@ -44,6 +44,11 @@
   &__course-item:first-child
     margin-right 12px
   &__course-link svg
-    fill light-cart
-  &__course-link[href] svg
     fill crayola
+  &__course-link[href] svg
+    fill light-cart
+    &:hover
+    &:focus
+      fill black
+    &:active
+      fill crayola

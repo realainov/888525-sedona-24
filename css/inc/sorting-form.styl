@@ -25,8 +25,6 @@
     margin 0
     padding 0
     list-style none
-    input
-      display none
   label
     text(400, 14px, 21px)
   &__facility-item
@@ -42,6 +40,8 @@
     margin-left 38px
     position relative
     cursor pointer
+  &__checkbox:focus + label
+    outline auto
   &__checkbox[disabled]:hover + label
   &__checkbox[disabled]:focus + label
     cursor default
@@ -70,31 +70,38 @@
     margin-bottom 22px
   &__price-controls
     display flex
+    align-items center
     width 100%
+    height 36px
     margin-bottom 20px
     border 2px solid white
     border-radius 3px
     label
       display flex
       align-items center
+      width 97px
+      height 22px
       margin-left 50px
       margin-bottom 0
-      //padding 6.5px 0 5px
-      width 50%
     label:first-of-type
+      margin-left 60px
       border-right 2px solid white
     input
       width 100%
-      height 32px
+      height 22px
       margin-left 5px
       background-color transparent
       border none
+      &::-webkit-outer-spin-button
+      &::-webkit-inner-spin-button
+        -webkit-appearance none
   &__range-controls
     position relative
   &__scale
     width 100%
     height 2px
     background-color rgba(255, 255, 255, 0.3)
+    overflow hidden
   &__bar
     width 100%
     height 2px

@@ -74,35 +74,49 @@
       </ul>
     </section>
     <section class="site-main__search search">
-      <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-      <b class="search__question">Заинтересовались?</b>
-      <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <div class="search__text-container">
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <b class="search__question">Заинтересовались?</b>
+        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      </div>
       <div class="search__form-container">
         <a class="title search__title" href="#">Поиск гостиницы в Седоне</a>
         <form class="search__form search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label>Дата заезда:
+          <label class="search-form__arrival-date-label">Дата заезда:
             <input class="search-form__date-field" id="arrival-date-field" name="arrival-date" type="text"
-                   value="24 апреля 2017">
+                   value="24 апреля 2017" autocomplete="off">
+            <button class="search-form__calendar-button" type="button" aria-label="Открыть календарь"></button>
           </label>
-          <label>Дата выезда:
+          <label class="search-form__departure-date-label">Дата выезда:
             <input class="search-form__date-field" id="departure-date-field" name="departure-date" type="text"
-                   value="4 июля 2017">
+                   value="4 июля 2017" autocomplete="off">
+            <button class="search-form__calendar-button" type="button" aria-label="Открыть календарь"></button>
           </label>
-          <label>Взрослые:
+          <label class="adults-label">Взрослые:
+            <button class="search-form__count-button search-form__prev-button" type="button"
+                    aria-label="Меньше"></button>
             <input class="search-form__number-field" id="adults-number-field" name="adults-number" type="number"
                    value="2">
+            <button class="search-form__count-button search-form__next-button" type="button"
+                    aria-label="Больше"></button>
           </label>
-          <label>Дети:
+          <label class="kids-label">Дети:
+            <button class="search-form__count-button search-form__prev-button" type="button"
+                    aria-label="Меньше"></button>
             <input class="search-form__number-field" id="kids-number-field" name="kids-number" type="number" value="0">
+            <button class="search-form__count-button search-form__next-button" type="button"
+                    aria-label="Больше"></button>
           </label>
-          <button class="search-form__button" type="submit" aria-label="Найти">Найти</button>
+          <button class="search-form__button" type="submit">Найти</button>
         </form>
       </div>
-      <a href="https://goo.gl/maps/WN3DfA5Fx4w" target="_blank"><img src="img/map.jpg" width="1200" height="594" alt="Карта города"></a>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d104770.26496755163!2d-111.8651774!3d34.8544488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1553021076155"
+        width="1200" height="594" frameborder="0" allowfullscreen></iframe>
     </section>
   </main>
   <footer class="site-footer site-footer--absolute">
-    <a class="site-footer__hashtag" href="#">#visitsedona</a>
+    <a class="site-footer__hashtag" href="https://www.instagram.com/explore/tags/visitsedona/">#visitsedona</a>
     <ul class="site-footer__social-list">
       <li class="site-footer__social-item">
         <a class="site-footer__social-button" href="#" title="Мы в Twitter"><img
@@ -128,5 +142,6 @@
     </div>
   </footer>
 </div>
+<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -12,13 +12,17 @@
   &__hashtag
     margin-top -12px
     text(800, 21px, 26px)
+    &:hover
+    &:focus
+      color crayola
+    &:active
+      color light-grey
   &__social-list
     display flex
     flex-wrap wrap
     max-width 312px
     margin 0
-    margin-top -12px
-    margin-right -20px
+    margin-left 34px
     padding 0
     list-style none
   &__social-item
@@ -38,3 +42,5 @@
       background-color blue-still
       & img
         opacity 0.3
+  &__caption
+    margin-top -5px
