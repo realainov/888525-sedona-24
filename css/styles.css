@@ -279,6 +279,7 @@ a {
 }
 .site-header__site-navigation-item a {
   color: #766357;
+  outline: none;
 }
 .site-header__site-navigation-item a[href] {
   color: #000;
@@ -1315,6 +1316,7 @@ a {
   font-weight: 800;
   font-size: 21px;
   line-height: 26px;
+  outline: none;
 }
 .site-footer__hashtag:hover,
 .site-footer__hashtag:focus {
@@ -1368,6 +1370,7 @@ a {
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
+  outline: none;
 }
 .site-footer__social-button:hover,
 .site-footer__social-button:focus {
@@ -1406,6 +1409,7 @@ a {
   width: 115px;
   height: 41px;
   margin-left: 8px;
+  outline: none;
 }
 .caption__html-academy path {
   fill: #000;
