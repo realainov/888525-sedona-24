@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Седона: Главная страница</title>
 </head>
 <body>
@@ -85,34 +85,54 @@
           <label class="search-form__arrival-date-label">Дата заезда:
             <input class="search-form__date-field" id="arrival-date-field" name="arrival-date" type="text"
                    value="24 апреля 2017" autocomplete="off">
-            <button class="search-form__calendar-button" type="button" aria-label="Открыть календарь"></button>
+            <button class="search-form__calendar-button" type="button" aria-label="Открыть календарь">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="#a9a9a9"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
+            </button>
           </label>
           <label class="search-form__departure-date-label">Дата выезда:
             <input class="search-form__date-field" id="departure-date-field" name="departure-date" type="text"
                    value="4 июля 2017" autocomplete="off">
-            <button class="search-form__calendar-button" type="button" aria-label="Открыть календарь"></button>
+            <button class="search-form__calendar-button" type="button" aria-label="Открыть календарь">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="#a9a9a9"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
+            </button>
           </label>
           <label class="adults-label">Взрослые:
             <button class="search-form__count-button search-form__prev-button" type="button"
-                    aria-label="Меньше"></button>
+                    aria-label="Меньше">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+                <path d="M0 4h11v3H0z"/>
+              </svg>
+            </button>
             <input class="search-form__number-field" id="adults-number-field" name="adults-number" type="number"
                    value="2">
             <button class="search-form__count-button search-form__next-button" type="button"
-                    aria-label="Больше"></button>
+                    aria-label="Больше">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+                <path d="M0 4h11v3H0z"/>
+                <path transform="matrix(0 -1 1 0 0 11)" d="M0 4h11v3H0z"/>
+              </svg>
+            </button>
           </label>
           <label class="kids-label">Дети:
             <button class="search-form__count-button search-form__prev-button" type="button"
-                    aria-label="Меньше"></button>
+                    aria-label="Меньше">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+              <path d="M0 4h11v3H0z"/>
+            </svg>
+            </button>
             <input class="search-form__number-field" id="kids-number-field" name="kids-number" type="number" value="0">
             <button class="search-form__count-button search-form__next-button" type="button"
-                    aria-label="Больше"></button>
+                    aria-label="Больше">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+                <path d="M0 4h11v3H0z"/>
+                <path transform="matrix(0 -1 1 0 0 11)" d="M0 4h11v3H0z"/>
+              </svg>
+            </button>
           </label>
           <button class="search-form__button" type="submit">Найти</button>
         </form>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d104770.26496755163!2d-111.8651774!3d34.8544488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1553021076155"
-        width="1200" height="594" frameborder="0" allowfullscreen></iframe>
+      <div class="search__map"></div>
     </section>
   </main>
   <footer class="site-footer site-footer--absolute">
@@ -142,6 +162,7 @@
     </div>
   </footer>
 </div>
-<script src="js/scripts.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCimUDvBzZXH9OZSiAl4AH_s5ge6uNP76A&callback=initMap"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

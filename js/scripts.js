@@ -165,18 +165,49 @@ if (document.querySelector(".search__title") !== null) {
   });
 }
 
+if (document.querySelector(".search__map") !== null) {
+  var map;
+
+  function initMap() {
+
+    map = new google.maps.Map(document.querySelector(".search__map"), {
+      center: {lat: 34.769340, lng: -111.761224},
+      zoom: 9,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_CENTER
+      },
+      scaleControl: true,
+      streetViewControl: true,
+      streetViewControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_CENTER
+      }
+    });
+
+    var marker = new google.maps.Marker({
+      position: {lat: 34.869340, lng: -111.761224},
+      map: map,
+      title: "Седона"
+    });
+  }
+}
+
 if (is_ie) {
   var welcome = document.querySelector(".site-main__welcome");
   welcome.style.backgroundPosition = "center 225px, center -85px";
 
-  adultsMinus.style.right = 90 + "px";
-  adultsPlus.style.right = 25 + "px";
-  kidsMinus.style.right = 85 + "px";
-  kidsPlus.style.right = 20 + "px";
+  adultsMinus.style.right = 95 + "px";
+  adultsPlus.style.right = 20 + "px";
+  kidsMinus.style.right = 90 + "px";
+  kidsPlus.style.right = 15 + "px";
 
   var calendarButton = searchModal.querySelectorAll(".search-form__calendar-button");
 
   [].forEach.call(calendarButton, function (buttonItem) {
-    buttonItem.style.right = 20 + "px";
+    buttonItem.style.right = 10 + "px";
   });
 }
