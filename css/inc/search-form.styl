@@ -13,9 +13,14 @@
   text(800, 14px, 26px)
 
   box-shadow 0 7px 15px 0 rgba(0, 1, 1, 0.15)
-  transform translateY(-400px)
+  //opacity 1
+  transform translateY(0)
   transition transform 1s
+  &--close
+    //opacity 0
+    transform translateY(-400px)
   &--show
+    //opacity 1
     transform translateY(0)
   label
     display flex

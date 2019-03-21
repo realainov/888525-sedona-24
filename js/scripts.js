@@ -1,5 +1,64 @@
 var ua = window.navigator.userAgent.toLowerCase(), is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
 
+if (document.querySelector(".search__title") !== null) {
+  var searchButton = document.querySelector(".search__title");
+  var searchModal = document.querySelector(".search-form");
+  searchModal.classList.add("search-form--close");
+
+  searchButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    searchModal.classList.toggle("search-form--show");
+  });
+
+  var adultsLabel = searchModal.querySelector(".search-form__adults");
+  var adultsMinus = adultsLabel.querySelector(".search-form__prev-button");
+  var adultsPlus = adultsLabel.querySelector(".search-form__next-button");
+  var adultsInput = adultsLabel.querySelector("#adults-number-field");
+
+  adultsMinus.classList.add("search-form__prev-button--show");
+  adultsPlus.classList.add("search-form__next-button--show");
+  adultsMinus.style.cursor = "pointer";
+  adultsPlus.style.cursor = "pointer";
+
+  adultsMinus.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    var adultsValue = adultsInput.value;
+    if (adultsValue > 0) {
+      adultsInput.value = adultsValue - 1;
+    }
+  });
+
+  adultsPlus.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    var adultsValue = adultsInput.value;
+    adultsInput.value = +adultsValue + 1;
+  });
+
+  var kidsLabel = searchModal.querySelector(".search-form__kids");
+  var kidsMinus = kidsLabel.querySelector(".search-form__prev-button");
+  var kidsPlus = kidsLabel.querySelector(".search-form__next-button");
+  var kidsInput = kidsLabel.querySelector("#kids-number-field");
+
+  kidsMinus.classList.add("search-form__prev-button--show");
+  kidsPlus.classList.add("search-form__next-button--show");
+  kidsMinus.style.cursor = "pointer";
+  kidsPlus.style.cursor = "pointer";
+
+  kidsMinus.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    var kidsValue = kidsInput.value;
+    if (kidsValue > 0) {
+      kidsInput.value = kidsValue - 1;
+    }
+  });
+
+  kidsPlus.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    var kidsValue = kidsInput.value;
+    kidsInput.value = +kidsValue + 1;
+  });
+}
+
 if (document.querySelector(".sorting-form__range-filter") !== null) {
   var scale = document.querySelector(".sorting-form__scale");
   var bar = document.querySelector(".sorting-form__bar");
@@ -105,64 +164,6 @@ if (document.querySelector(".sorting-form__range-filter") !== null) {
     bar.style.left = minResult.value / 10000 * rightLimit + "px";
     bar.style.width = (maxResult.value / 10000 * rightLimit) - (minResult.value / 10000 * rightLimit) + "px";
   };
-}
-
-if (document.querySelector(".search__title") !== null) {
-  var searchButton = document.querySelector(".search__title");
-  var searchModal = document.querySelector(".search-form");
-
-  searchButton.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    searchModal.classList.toggle("search-form--show");
-  });
-
-  var adultsLabel = searchModal.querySelector(".search-form__adults");
-  var adultsMinus = adultsLabel.querySelector(".search-form__prev-button");
-  var adultsPlus = adultsLabel.querySelector(".search-form__next-button");
-  var adultsInput = adultsLabel.querySelector("#adults-number-field");
-
-  adultsMinus.classList.add("search-form__prev-button--show");
-  adultsPlus.classList.add("search-form__next-button--show");
-  adultsMinus.style.cursor = "pointer";
-  adultsPlus.style.cursor = "pointer";
-
-  adultsMinus.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    var adultsValue = adultsInput.value;
-    if (adultsValue > 0) {
-      adultsInput.value = adultsValue - 1;
-    }
-  });
-
-  adultsPlus.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    var adultsValue = adultsInput.value;
-    adultsInput.value = +adultsValue + 1;
-  });
-
-  var kidsLabel = searchModal.querySelector(".search-form__kids");
-  var kidsMinus = kidsLabel.querySelector(".search-form__prev-button");
-  var kidsPlus = kidsLabel.querySelector(".search-form__next-button");
-  var kidsInput = kidsLabel.querySelector("#kids-number-field");
-
-  kidsMinus.classList.add("search-form__prev-button--show");
-  kidsPlus.classList.add("search-form__next-button--show");
-  kidsMinus.style.cursor = "pointer";
-  kidsPlus.style.cursor = "pointer";
-
-  kidsMinus.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    var kidsValue = kidsInput.value;
-    if (kidsValue > 0) {
-      kidsInput.value = kidsValue - 1;
-    }
-  });
-
-  kidsPlus.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    var kidsValue = kidsInput.value;
-    kidsInput.value = +kidsValue + 1;
-  });
 }
 
 if (document.querySelector(".search__map") !== null) {
