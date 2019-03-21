@@ -116,7 +116,7 @@ if (document.querySelector(".search__title") !== null) {
     searchModal.classList.toggle("search-form--show");
   });
 
-  var adultsLabel = searchModal.querySelector(".adults-label");
+  var adultsLabel = searchModal.querySelector(".search-form__adults");
   var adultsMinus = adultsLabel.querySelector(".search-form__prev-button");
   var adultsPlus = adultsLabel.querySelector(".search-form__next-button");
   var adultsInput = adultsLabel.querySelector("#adults-number-field");
@@ -140,7 +140,7 @@ if (document.querySelector(".search__title") !== null) {
     adultsInput.value = +adultsValue + 1;
   });
 
-  var kidsLabel = searchModal.querySelector(".kids-label");
+  var kidsLabel = searchModal.querySelector(".search-form__kids");
   var kidsMinus = kidsLabel.querySelector(".search-form__prev-button");
   var kidsPlus = kidsLabel.querySelector(".search-form__next-button");
   var kidsInput = kidsLabel.querySelector("#kids-number-field");
@@ -199,15 +199,4 @@ if (document.querySelector(".search__map") !== null) {
 if (is_ie) {
   var welcome = document.querySelector(".site-main__welcome");
   welcome.style.backgroundPosition = "center 225px, center -85px";
-
-  adultsMinus.style.right = 95 + "px";
-  adultsPlus.style.right = 20 + "px";
-  kidsMinus.style.right = 90 + "px";
-  kidsPlus.style.right = 15 + "px";
-
-  var calendarButton = searchModal.querySelectorAll(".search-form__calendar-button");
-
-  [].forEach.call(calendarButton, function (buttonItem) {
-    buttonItem.style.right = 10 + "px";
-  });
 }
